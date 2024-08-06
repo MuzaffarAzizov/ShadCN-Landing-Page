@@ -5,28 +5,903 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <title>Tailwind</title>
+    <style>
+      .svg-green {
+        filter: invert(38%) sepia(69%) saturate(2668%) hue-rotate(89deg)
+          brightness(97%) contrast(101%);
+      }
+      .shad {
+        filter: brightness(0) invert(1);
+      }
+    </style>
   </head>
-  <body>
-    <nav
-      class="flex items-center justify-between bg-black text-white h-[80px] p-8"
-    >
-      <h3 class="text-3xl font-bold underline">ShadcnUI/React</h3>
-      <ul class="flex justify-around space-x-8">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-      <a href="#">Github</a>
-    </nav>
-    <header class="bg-black">
-      <h1>Shadcn landing page for React developers</h1>
-      <p>
-        Build your React landing page effortlessly with the required sections to
-        your project.
-      </p>
-      <button>Get Started</button>
-      <button>Github Repository</button>
-    </header>
+  <body class="bg-blackColor">
+    <div class="container">
+      <nav class="flex items-center justify-between text-white h-[70px] p-8">
+        <h3 class="text-3xl font-bold underline">ShadcnUI/React</h3>
+        <ul class="flex justify-around space-x-8">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="nav__github text-white bg-gray-500">
+          <img src="./img/github.png" alt="" class="w-20 h-10 text-white" />
+        </div>
+      </nav>
+      <hr class="w-[100%]" />
+      <header class="bg-blackColor text-white h-[90vh] flex flex-row">
+        <div class="header__column1 basis-1/2">
+          <h1 class="text-[60px]">
+            Shadcn landing page <br />
+            for React developers
+          </h1>
+          <p class="my-5">
+            Build your React landing page effortlessly with the required <br />
+            sections to your project.
+          </p>
+          <button class="bg-greenColor text-blackColor px-14 py-2 rounded mr-4">
+            Get Started
+          </button>
+          <button
+            class="bg-blackColor-500 text-white px-14 py-2 rounded border-2"
+          >
+            Github Repository
+          </button>
+        </div>
+        <div class="header__column2 basis-1/4">
+          <div class="max-w-sm mx-auto mt-10 bg-gray-900">
+            <div class="flex items-center shadow-lg rounded-lg p-6">
+              <img
+                class="w-16 h-16 rounded-full mr-4"
+                src="img/John.jpeg"
+                alt="John Doe's profile photo"
+              />
+              <div>
+                <div class="text-xl font-medium text-white">John Doe React</div>
+                <p class="text-white">@john_doe</p>
+                <p class="mt-2 text-white">This landing page is awesome!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center bg-blackColor shadow-lg rounded-lg p-6"
+        >
+          <img
+            class="w-16 h-16 rounded-full mb-4"
+            src="https://via.placeholder.com/150"
+            alt="Leo Miranda's profile photo"
+          />
+          <div class="text-center">
+            <div class="text-xl font-medium text-white">Leo Miranda</div>
+            <p class="text-white">Frontend Developer</p>
+            <p class="mt-2 text-white">
+              I really enjoy transforming ideas into functional software that
+              exceeds expectations.
+            </p>
+            <div class="flex justify-center mt-4 space-x-4">
+              <a href="https://github.com/" target="_blank">
+                <img
+                  class="w-6 h-6"
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg"
+                  alt="GitHub Logo"
+                />
+              </a>
+              <a href="https://twitter.com/" target="_blank">
+                <img
+                  class="w-6 h-6"
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg"
+                  alt="Twitter Logo"
+                />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img
+                  class="w-6 h-6"
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg"
+                  alt="LinkedIn Logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <h3 class="text-greenColor text-2xl text-center">
+        Investors and founders
+      </h3>
+      <div class="sponsors flex justify-center gap-4 m-12">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 1</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 2</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 3</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 4</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 5</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-radar text-mycolor"
+        >
+          <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
+          <path d="M4 6h.01"></path>
+          <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
+          <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"></path>
+          <path d="M12 18h.01"></path>
+          <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"></path>
+          <circle cx="12" cy="12" r="2"></circle>
+          <path d="m13.41 10.59 5.66-5.66"></path>
+        </svg>
+        <h4 class="text-mycolor text-2xl">Sponsor 6</h4>
+      </div>
+      <div
+        class="about bg-grayColor m-24 flex justify-center gap-8 p-12 items-center"
+      >
+        <img src="./img/about.png" alt="" class="w-[300px]" />
+        <div class="about__text">
+          <h2 class="text-whiteColor text-4xl font-bold">
+            <span class="text-greenColor">About</span> Company
+          </h2>
+          <p class="text-lightColor mt-4 mb-12 text-xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </p>
+          <div class="about__text__users flex justify-around gap-8 text-center">
+            <div class="about__text__user">
+              <h2 class="text-whiteColor text-4xl font-bold">2.7K+</h2>
+              <p class="text-lightColor mt-4 mb-12 text-xl">Users</p>
+            </div>
+            <div class="about__text__user">
+              <h2 class="text-whiteColor text-4xl font-bold">1.8K+</h2>
+              <p class="text-lightColor mt-4 mb-12 text-xl">Subscribers</p>
+            </div>
+            <div class="about__text__user">
+              <h2 class="text-whiteColor text-4xl font-bold">112</h2>
+              <p class="text-lightColor mt-4 mb-12 text-xl">Downloads</p>
+            </div>
+            <div class="about__text__user">
+              <h2 class="text-whiteColor text-4xl font-bold">4</h2>
+              <p class="text-lightColor mt-4 mb-12 text-xl">Products</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="guide text-center m-24">
+        <h2 class="text-whiteColor text-4xl font-bold">
+          How It <span class="text-greenColor">Works</span> Step-by-Step Guide
+        </h2>
+        <p class="text-lightColor mt-4 mb-12 text-xl">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+          dolor pariatur sit!
+        </p>
+        <div class="guide__cards flex items-center justify-between gap-8">
+          <div class="guide__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <img src="./img/guide1.svg" alt="" class="w-14 h-14 mx-auto" />
+            <h3 class="text-whiteColor text-2xl font-bold m-4">
+              Accessibility
+            </h3>
+            <h4 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit. Illum<br />
+              quas provident cum
+            </h4>
+          </div>
+          <div class="guide__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <img src="./img/guide2.svg" alt="" class="w-14 h-14 mx-auto" />
+            <h3 class="text-whiteColor text-2xl font-bold m-4">Community</h3>
+            <h4 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit. Illum<br />
+              quas provident cum
+            </h4>
+          </div>
+          <div class="guide__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <img src="./img/guide3.svg" alt="" class="w-14 h-14 mx-auto" />
+            <h3 class="text-whiteColor text-2xl font-bold m-4">Scalability</h3>
+            <h4 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit. Illum<br />
+              quas provident cum
+            </h4>
+          </div>
+          <div class="guide__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <img src="./img/guide4.svg" alt="" class="w-14 h-14 mx-auto" />
+            <h3 class="text-whiteColor text-2xl font-bold m-4">Gamification</h3>
+            <h4 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit. Illum<br />
+              quas provident cum
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="feature m-24">
+        <h2 class="text-whiteColor text-4xl font-bold text-center">
+          Many <span class="text-greenColor">Great Features</span>
+        </h2>
+        <div
+          class="features__rounded flex items-center justify-center gap-4 m-4"
+        >
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Dark/Light theme
+          </h4>
+
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Reviews
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Features
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Pricing
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Contact form
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Our team
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Responsive design
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Newsletter
+          </h4>
+          <h4
+            class="text-whiteColor mt-4 mb-12 text-base bg-grayColor rounded-full px-4 py-1 font-bold text-center"
+          >
+            Minimalist
+          </h4>
+        </div>
+        <div class="features__cards flex items-center justify-between gap-8">
+          <div class="features__card bg-grayColor w-1/3 p-4 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold my-2">
+              Responsive Design
+            </h3>
+            <p class="text-whiteColor text-base my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing <br />
+              elit. Nisi nesciunt est nostrum omnis ab sapiente.
+            </p>
+            <img src="./img/feature1.png" alt="" />
+          </div>
+          <div class="features__card bg-grayColor w-1/3 p-4 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold my-2">
+              Intuitive user interface
+            </h3>
+            <p class="text-whiteColor text-base my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing <br />
+              elit. Nisi nesciunt est nostrum omnis ab sapiente.
+            </p>
+            <img src="./img/feature2.png" alt="" />
+          </div>
+          <div class="features__card bg-grayColor w-1/3 p-4 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold my-2">
+              AI-Powered insights
+            </h3>
+            <p class="text-whiteColor text-base my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing <br />
+              elit. Nisi nesciunt est nostrum omnis ab sapiente.
+            </p>
+            <img src="./img/feature3.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="client flex justify-center items-center">
+        <div class="client__text">
+          <h2 class="text-whiteColor text-4xl font-bold">
+            <span class="text-greenColor">Client-Centric</span> Services
+          </h2>
+          <p class="text-lightColor mt-4 mb-12 text-xl">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+            dolor.
+          </p>
+          <div
+            class="client__card bg-grayColor w-full p-8 rounded-lg my-8 flex flex-start justify-center items-center gap-4"
+          >
+            <img
+              src="./img/client1.svg"
+              alt=""
+              class="w-14 h-14 bg-darkGreen rounded-lg"
+            />
+            <div class="client__card__text">
+              <h3 class="text-whiteColor text-2xl font-bold">
+                Code Collaboration
+              </h3>
+              <h4 class="text-lightColor text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                nesciunt est <br />
+                nostrum omnis ab sapiente.
+              </h4>
+            </div>
+          </div>
+          <div
+            class="client__card bg-grayColor w-full p-8 rounded-lg my-8 flex flex-start justify-center items-center gap-4"
+          >
+            <img
+              src="./img/client2.svg"
+              alt=""
+              class="w-14 h-14 bg-darkGreen rounded-lg"
+            />
+            <div class="client__card__text">
+              <h3 class="text-whiteColor text-2xl font-bold">
+                Project Management
+              </h3>
+              <h4 class="text-lightColor text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                nesciunt est <br />
+                nostrum omnis ab sapiente.
+              </h4>
+            </div>
+          </div>
+          <div
+            class="client__card bg-grayColor w-full p-8 rounded-lg my-8 flex flex-start justify-center items-center gap-4"
+          >
+            <img
+              src="./img/client3.svg"
+              alt=""
+              class="w-14 h-14 bg-darkGreen rounded-lg"
+            />
+            <div class="client__card__text">
+              <h3 class="text-whiteColor text-2xl font-bold">
+                Task Automation
+              </h3>
+              <h4 class="text-lightColor text-base">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                nesciunt est <br />
+                nostrum omnis ab sapiente.
+              </h4>
+            </div>
+          </div>
+        </div>
+        <img src="./img/client.png" alt="" />
+      </div>
+      <div
+        class="ideas bg-grayColor my-20 flex justify-around p-12 items-center"
+      >
+        <div class="ideas__column1">
+          <h2 class="text-whiteColor text-4xl font-bold">
+            All Your <span class="text-greenColor">Ideas & Concepts</span> In
+            One <br />
+            Interface
+          </h2>
+          <p class="text-lightColor mt-4 mb-12 text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+            beatae. Ipsa <br />
+            tempore ipsum iste quibusdam illum ducimus eos. Quasi, sed!
+          </p>
+        </div>
+        <div class="ideas__column2">
+          <button class="bg-greenColor text-blackColor px-4 py-2 rounded mr-4">
+            Request a Demo
+          </button>
+          <button class="bg-blackColor text-whiteColor px-4 py-2 rounded my-4">
+            View all features
+          </button>
+        </div>
+      </div>
+      <div class="discover m-12">
+        <h2 class="text-whiteColor text-4xl font-bold">
+          Discover Why<span class="text-greenColor"> People Love</span> This
+          Landing Page
+        </h2>
+        <p class="text-lightColor mt-4 mb-12 text-xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde
+          error facere hic reiciendis illo
+        </p>
+        <div class="discover__cards flex flex-wrap justify-center -mx-2 gap-4">
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              This landing page is awesome!
+            </h5>
+          </div>
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe2</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </h5>
+          </div>
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe4</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet, tempor incididunt aliqua. Ut enim ad
+              minim veniam, quis nostrud.
+            </h5>
+          </div>
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe1</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet, tempor incididunt aliqua. Ut enim ad
+              minim veniam, quis nostrud.
+            </h5>
+          </div>
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe3</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet, tempor incididunt aliqua. Ut enim ad
+              minim veniam, quis nostrud.
+            </h5>
+          </div>
+          <div class="discover__card bg-grayColor w-1/4 p-8 rounded-lg">
+            <div
+              class="discover__card__column flex items-center flex-start gap-4"
+            >
+              <img
+                src="./img/John.jpeg"
+                alt=""
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <div class="discover__card__text">
+                <h4 class="text-whiteColor text-xl font-bold">
+                  John Doe React
+                </h4>
+                <h6 class="text-lightColor text-sm my-1">@john_Doe5</h6>
+              </div>
+            </div>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet, tempor incididunt aliqua. Ut enim ad
+              minim veniam, quis nostrud.
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="crew m-12">
+        <h2 class="text-whiteColor text-4xl font-bold">
+          <span class="text-greenColor">Our Dedicated</span> Crew
+        </h2>
+        <p class="text-lightColor mt-4 mb-12 text-xl">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+          dolor pariatur sit!
+        </p>
+        <div class="crew__cards flex justify-center gap-8">
+          <div class="crew__card bg-grayColor w-1/4 p-8 rounded-lg text-center">
+            <!-- <img src="./img/crew1" alt="" /> -->
+            <h3 class="text-whiteColor text-2xl font-bold">Emma Smith</h3>
+            <h6 class="text-greenColor text-sm my-1">Product Manager</h6>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit.
+            </h5>
+            <!-- <img src="./linkedin.jpg" alt="" /> -->
+          </div>
+          <div class="crew__card bg-grayColor w-1/4 p-8 rounded-lg text-center">
+            <!-- <img src="./img/crew1" alt="" /> -->
+            <h3 class="text-whiteColor text-2xl font-bold">Emma Smith</h3>
+            <h6 class="text-greenColor text-sm my-1">Product Manager</h6>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit.
+            </h5>
+            <!-- <img src="./linkedin.jpg" alt="" /> -->
+          </div>
+          <div class="crew__card bg-grayColor w-1/4 p-8 rounded-lg text-center">
+            <!-- <img src="./img/crew1" alt="" /> -->
+            <h3 class="text-whiteColor text-2xl font-bold">Emma Smith</h3>
+            <h6 class="text-greenColor text-sm my-1">Product Manager</h6>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit.
+            </h5>
+            <!-- <img src="./linkedin.jpg" alt="" /> -->
+          </div>
+          <div class="crew__card bg-grayColor w-1/4 p-8 rounded-lg text-center">
+            <!-- <img src="./img/crew1" alt="" /> -->
+            <h3 class="text-whiteColor text-2xl font-bold">Emma Smith</h3>
+            <h6 class="text-greenColor text-sm my-1">Product Manager</h6>
+            <h5 class="text-whiteColor text-base">
+              Lorem ipsum dolor sit amet,<br />
+              consectetur adipisicing elit.
+            </h5>
+            <!-- <img src="./linkedin.jpg" alt="" /> -->
+          </div>
+        </div>
+      </div>
+      <div class="access text-center my-32">
+        <h2 class="text-whiteColor text-4xl font-bold">
+          Get <span class="text-greenColor"> Unlimited</span> Access
+        </h2>
+        <p class="text-lightColor mt-4 mb-12 text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          reiciendis.
+        </p>
+        <div class="access__cards flex justify-center gap-8 text-left mx-12">
+          <div class="access__card bg-grayColor w-1/3 p-8 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold">Free</h3>
+            <h3 class="text-whiteColor text-2xl font-bold">
+              $0
+              <span class="text-lightColor text-sm my-1 font-medium"
+                >/month</span
+              >
+            </h3>
+            <h6 class="text-lightColor text-sm my-4">
+              Lorem ipsum dolor sit, amet ipsum consectetur adipisicing <br />
+              elit.
+            </h6>
+            <button
+              class="bg-greenColor text-blackColor px-36 py-2 rounded mr-4"
+            >
+              Get Started
+            </button>
+            <div
+              class="access__column grid grid-cols-2 justify-start gap-y-4 my-10"
+            >
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">1 Team member</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">2 GB Storage</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Upto 4 pages</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Community support</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">lorem ipsum dolor</h5>
+            </div>
+          </div>
+          <div class="access__card bg-grayColor w-1/3 p-8 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold">Premium</h3>
+            <h3 class="text-whiteColor text-2xl font-bold">
+              $5
+              <span class="text-lightColor text-sm my-1 font-medium"
+                >/month</span
+              >
+            </h3>
+            <h6 class="text-lightColor text-sm my-4">
+              Lorem ipsum dolor sit, amet ipsum consectetur adipisicing <br />
+              elit.
+            </h6>
+            <button
+              class="bg-greenColor text-blackColor px-32 py-2 rounded mr-4"
+            >
+              Start Free Trial
+            </button>
+            <div
+              class="access__column grid grid-cols-2 justify-start gap-y-4 my-10"
+            >
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">4 Team member</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">4 GB Storage</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Upto 6 pages</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Priority support</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">lorem ipsum dolor</h5>
+            </div>
+          </div>
+          <div class="access__card bg-grayColor w-1/3 p-8 rounded-lg">
+            <h3 class="text-whiteColor text-2xl font-bold">Enterprise</h3>
+            <h3 class="text-whiteColor text-2xl font-bold">
+              $40
+              <span class="text-lightColor text-sm my-1 font-medium"
+                >/month</span
+              >
+            </h3>
+            <h6 class="text-lightColor text-sm my-4">
+              Lorem ipsum dolor sit, amet ipsum consectetur adipisicing <br />
+              elit.
+            </h6>
+            <button
+              class="bg-greenColor text-blackColor px-36 py-2 rounded mr-4"
+            >
+              Contact US
+            </button>
+            <div
+              class="access__column grid grid-cols-2 justify-start gap-y-4 my-10"
+            >
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">10 Team member</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">8 GB Storage</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Upto 10 pages</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">Community support</h5>
+              <img
+                src="./img/correct.svg"
+                alt=""
+                class="text-greenColor-500 svg-green"
+              />
+              <h5 class="text-whiteColor text-base">lorem ipsum dolor</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="flex justify-around my-20">
+        <div class="footer__column1">
+          <a href="#" class="text-whiteColor text-xl font-bold flex gap-2"
+            ><img
+              src="./img/shadcn.svg"
+              alt=""
+              class="w-6 shad"
+            />ShadcnUI/React</a
+          >
+        </div>
+        <div class="footer__column1">
+          <h4 class="text-whiteColor text-xl font-bold">Follow US</h4>
+          <h5 class="text-lightColor text-base my-2">Github</h5>
+          <h5 class="text-lightColor text-base my-2">Twitter</h5>
+          <h5 class="text-lightColor text-base my-2">Dribbble</h5>
+        </div>
+        <div class="footer__column1">
+          <h4 class="text-whiteColor text-xl font-bold">Platforms</h4>
+          <h5 class="text-lightColor text-base my-2">Web</h5>
+          <h5 class="text-lightColor text-base my-2">Mobile</h5>
+          <h5 class="text-lightColor text-base my-2">Desktop</h5>
+        </div>
+        <div class="footer__column1">
+          <h4 class="text-whiteColor text-xl font-bold">About</h4>
+          <h5 class="text-lightColor text-base my-2">Features</h5>
+          <h5 class="text-lightColor text-base my-2">Pricing</h5>
+          <h5 class="text-lightColor text-base my-2">FAQ</h5>
+        </div>
+        <div class="footer__column1">
+          <h4 class="text-whiteColor text-xl font-bold">Community</h4>
+          <h5 class="text-lightColor text-base my-2">Youtube</h5>
+          <h5 class="text-lightColor text-base my-2">Discord</h5>
+          <h5 class="text-lightColor text-base my-2">Twitch</h5>
+        </div>
+      </footer>
+      <div class="copy text-whiteColor text-base text-center my-10">
+        © 2024 Landing page made by
+        <span class="text-greenColor my-1"> Leo Miranda</span>
+      </div>
+    </div>
   </body>
 </html>
