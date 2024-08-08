@@ -12,6 +12,8 @@ module.exports = {
         lightColor: "#636667",
         color: "#3db30e",
         darkGreen: "#1D3B25",
+        backColor:'#252427',
+        githubColor:'#212124',
       },
     },
   },
